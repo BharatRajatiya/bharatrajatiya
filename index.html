@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bharat Rajatiya – Chartered Accountant, CFA Candidate, Finance Manager at Aditya Birla Capital. Ex-UBS Investment Bank. Seeking global finance roles in Dubai/UAE." />
+  <meta name="keywords" content="Bharat Rajatiya, CA, CFA, UBS, Aditya Birla Capital, Finance Manager, Investment, Treasury, Dubai" />
+  <meta name="author" content="Bharat Rajatiya" />
+  <title>CA Bharat Rajatiya | Finance Professional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:    #0b0d12;
+      --bg2:   #10131a;
+      --bg3:   #13171f;
+      --bg4:   #181d27;
+      --bdr:   rgba(212,175,55,0.13);
+      --bdrh:  rgba(212,175,55,0.38);
+      --gold:  #d4af37;
+      --goldl: #f0d060;
+      --goldd: rgba(212,175,55,0.14);
+      --white: #f0ede8;
+      --g1:    #b8b4ab;
+      --g2:    #6e6a63;
+      --g3:    #2a2f3d;
+      --grn:   rgba(74,222,128,0.12);
+      --grnt:  #4ade80;
+      --rsm:   6px;
+      --rmd:   12px;
+      --rlg:   20px;
+      --ease:  0.35s cubic-bezier(0.4,0,0.2,1);
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans:  'DM Sans', sans-serif;
+      --mono:  'DM Mono', monospace;
+    }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--white);font-family:var(--sans);line-height:1.7;overflow-x:hidden}
+    ::selection{background:var(--goldd);color:var(--goldl)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    ::-webkit-scrollbar{width:4px}
+    ::-webkit-scrollbar-track{background:var(--bg)}
+    ::-webkit-scrollbar-thumb{background:var(--goldd);border-radius:99px}
+    ::-webkit-scrollbar-thumb:hover{background:var(--gold)}
+
+    /* Layout */
+    .section{padding:110px 0;position:relative}
+    .container{max-width:1160px;margin:0 auto;padding:0 32px}
+    .divider{width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--bdr) 40%,transparent)}
+    .slbl{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:flex;align-items:center;gap:12px}
+    .slbl::before{content:'';width:28px;height:1px;background:var(--gold);flex-shrink:0}
+    .stitle{font-family:var(--serif);font-size:clamp(2rem,3.5vw,2.8rem);font-weight:700;line-height:1.2;margin-bottom:56px}
+    .stitle span{color:var(--gold)}
+
+    /* Buttons */
+    .btn{display:inline-flex;align-items:center;gap:8px;font-size:.83rem;font-weight:600;letter-spacing:.06em;padding:14px 28px;border-radius:var(--rsm);transition:var(--ease);cursor:pointer;border:none}
+    .btn-p{background:var(--gold);color:var(--bg)}
+    .btn-p:hover{background:var(--goldl);transform:translateY(-2px);box-shadow:0 12px 32px rgba(212,175,55,.25)}
+    .btn-o{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+    .btn-o:hover{background:var(--goldd);transform:translateY(-2px)}
+    .btn-g{background:rgba(255,255,255,.04);color:var(--g1);border:1px solid var(--bdr)}
+    .btn-g:hover{background:rgba(255,255,255,.08);color:var(--white);transform:translateY(-2px)}
+
+    /* Navbar */
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:20px 0;transition:background var(--ease),padding var(--ease),border-color var(--ease);border-bottom:1px solid transparent}
+    .navbar.scrolled{background:rgba(11,13,18,.93);backdrop-filter:blur(18px);padding:13px 0;border-bottom-color:var(--bdr)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1160px;margin:0 auto;padding:0 32px}
+    .nav-logo{font-family:var(--serif);font-weight:700;font-size:1.1rem;transition:color var(--ease)}
+    .nav-logo span{color:var(--gold)}
+    .nav-logo:hover{color:var(--goldl)}
+    .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+    .nav-links a{font-size:.8rem;font-weight:500;letter-spacing:.04em;color:var(--g1);transition:color var(--ease);position:relative}
+    .nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--gold);transition:width var(--ease)}
+    .nav-links a:hover,.nav-links a.active{color:var(--goldl)}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%}
+    .nav-cta{font-size:.76rem!important;font-weight:600!important;padding:7px 16px;border:1px solid var(--gold);border-radius:var(--rsm);color:var(--gold)!important;transition:background var(--ease),color var(--ease)!important}
+    .nav-cta:hover{background:var(--gold)!important;color:var(--bg)!important}
+    .nav-cta::after{display:none!important}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+    .hamburger span{display:block;width:24px;height:1.5px;background:var(--g1);transition:var(--ease)}
+    .hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+    .mob-menu{display:none;position:fixed;inset:0;background:rgba(11,13,18,.97);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:36px}
+    .mob-menu.open{display:flex}
+    .mob-menu a{font-family:var(--serif);font-size:1.8rem;font-weight:600;color:var(--g1);transition:color var(--ease)}
+    .mob-menu a:hover{color:var(--gold)}
+
+    /* Hero */
+    #hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:0}
+    #hero-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+    .hero-ov{position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse 90% 70% at 15% 50%,rgba(212,175,55,.055) 0%,transparent 55%),radial-gradient(ellipse 70% 90% at 85% 80%,rgba(212,175,55,.03) 0%,transparent 50%)}
+    .hero-cnt{position:relative;z-index:2;max-width:1160px;margin:0 auto;padding:0 32px;padding-top:120px}
+
+    .hero-ey{font-family:var(--mono);font-size:.75rem;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:28px;display:flex;align-items:center;gap:14px;opacity:0;animation:fadeUp .8s ease .2s forwards}
+    .hero-ey::before{content:'';width:40px;height:1px;background:var(--gold)}
+
+    .hero-name{font-family:var(--serif);font-weight:900;line-height:.92;letter-spacing:-.01em;font-size:clamp(3.8rem,10vw,7.5rem);text-transform:uppercase;margin-bottom:32px;opacity:0;animation:fadeUp .9s ease .35s forwards}
+    .hero-name .w1{display:block;color:var(--white)}
+    .hero-name .w2{display:block;color:var(--gold)}
+
+    .hero-tw-wrap{min-height:2.2rem;margin-bottom:34px;opacity:0;animation:fadeIn .6s ease .8s forwards}
+    .hero-tw{font-family:var(--mono);font-size:clamp(.78rem,1.5vw,.96rem);color:var(--g1);letter-spacing:.06em}
+    .cursor{display:inline-block;width:2px;height:.9em;background:var(--gold);margin-left:2px;animation:blink 1s step-end infinite;vertical-align:middle}
+
+    .hero-skills{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:42px;opacity:0;animation:fadeUp .9s ease 1s forwards}
+    .hchip{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;padding:6px 13px;border-radius:99px;border:1px solid var(--bdr);background:rgba(212,175,55,.04);color:var(--g1);transition:var(--ease)}
+    .hchip:hover{border-color:var(--bdrh);color:var(--goldl);background:var(--goldd)}
+    .hchip .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
+
+    .hero-acts{display:flex;flex-wrap:wrap;gap:13px;opacity:0;animation:fadeUp .9s ease 1.15s forwards}
+
+    .hero-scr{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:7px;opacity:0;animation:fadeIn 1s ease 1.5s forwards}
+    .hero-scr span{font-family:var(--mono);font-size:.6rem;letter-spacing:.15em;color:var(--g2);text-transform:uppercase}
+    .scr-line{width:1px;height:42px;background:linear-gradient(to bottom,var(--gold),transparent);animation:scr 2.2s ease-in-out infinite}
+
+    /* About */
+    #about{background:var(--bg2)}
+    .about-g{display:grid;grid-template-columns:1fr 1.7fr;gap:80px;align-items:start}
+    .ph-wrap{position:relative}
+    .ph-box{width:100%;aspect-ratio:3/4;border-radius:var(--rlg);background:var(--bg3);border:1px solid var(--bdr);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:var(--g2);font-size:.78rem;overflow:hidden;position:relative}
+    .ph-box::before{content:'';position:absolute;top:-1px;left:-1px;right:-1px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+    .ph-av{width:70px;height:70px;border-radius:50%;background:var(--goldd);display:flex;align-items:center;justify-content:center}
+    .ph-av svg{color:var(--gold)}
+    .ph-hint{text-align:center;padding:0 22px;line-height:1.6}
+    .ph-hint strong{color:var(--gold);font-size:.72rem;font-weight:500}
+    .ph-hint em{display:block;font-size:.67rem;font-style:normal;color:var(--g2);margin-top:5px}
+    .ph-acc{position:absolute;bottom:-20px;right:-20px;width:108px;height:108px;border:1px solid var(--bdr);border-radius:var(--rmd);background:var(--bg3);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;z-index:2}
+    .ph-acc .big{font-family:var(--serif);font-size:1.8rem;font-weight:700;color:var(--gold)}
+    .ph-acc .sml{font-size:.63rem;color:var(--g2);text-align:center;letter-spacing:.04em}
+
+    .abt-text p{color:var(--g1);font-size:.94rem;margin-bottom:17px}
+    .abt-text p strong{color:var(--white);font-weight:500}
+    .abt-text p em{color:var(--goldl);font-style:normal;font-weight:500}
+    .abt-quote{border-left:2px solid var(--gold);padding-left:18px;margin:26px 0;font-family:var(--serif);font-size:1.04rem;font-style:italic;color:var(--g1);line-height:1.7}
+    .abt-quote span{color:var(--gold);font-style:normal}
+    .abt-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
+    .sbox{background:var(--bg3);border:1px solid var(--bdr);border-radius:var(--rmd);padding:16px;text-align:center;transition:var(--ease)}
+    .sbox:hover{border-color:var(--bdrh);transform:translateY(-3px)}
+    .snum{font-family:var(--serif);font-size:1.45rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:3px}
+    .slb2{font-size:.66rem;color:var(--g2);letter-spacing:.04em}
+    .abt-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+    .atag{font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;padding:4px 11px;border-radius:99px;border:1px solid var(--bdr);color:var(--g2)}
+
+    /* Timeline */
+    #experience{background:var(--bg)}
+    .tline{position:relative;padding-left:44px}
+    .tline::before{content:'';position:absolute;left:0;top:10px;bottom:10px;width:1px;background:linear-gradient(to bottom,var(--gold) 0%,var(--bdr) 70%,transparent)}
+    .tl-item{position:relative;padding-bottom:50px;opacity:0;transform:translateX(-18px);transition:opacity .6s ease,transform .6s ease}
+    .tl-item.visible{opacity:1;transform:translateX(0)}
+    .tl-item:last-child{padding-bottom:0}
+    .tl-dot{position:absolute;left:-51px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--goldd);border:2px solid var(--gold);box-shadow:0 0 14px rgba(212,175,55,.35)}
+    .tl-meta{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-bottom:9px}
+    .tbadge{font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;padding:3px 9px;border-radius:99px;background:var(--goldd);color:var(--gold);text-transform:uppercase}
+    .tbadge.ppo{background:var(--grn);color:var(--grnt)}
+    .tbadge.awd{background:rgba(251,191,36,.1);color:#fbbf24}
+    .tdate{font-family:var(--mono);font-size:.68rem;color:var(--g2)}
+    .tco{font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--white);margin-bottom:3px}
+    .trole{font-size:.84rem;color:var(--goldl);font-weight:500;margin-bottom:14px}
+    .tbody{background:var(--bg3);border:1px solid var(--bdr);border-radius:var(--rmd);padding:20px;transition:border-color var(--ease)}
+    .tbody:hover{border-color:var(--bdrh)}
+    .tpts{list-style:none;display:flex;flex-direction:column;gap:9px}
+    .tpts li{display:flex;gap:10px;font-size:.85rem;color:var(--g1);line-height:1.65}
+    .tpts li::before{content:'→';color:var(--gold);flex-shrink:0;margin-top:2px;font-size:.76rem}
+    .tpts li strong{color:var(--white);font-weight:500}
+    .tpts li em{color:var(--gold);font-style:normal;font-weight:500}
+
+    /* Skills */
+    #skills{background:var(--bg2)}
+    .sk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:17px}
+    .sk-card{background:var(--bg3);border:1px solid var(--bdr);border-radius:var(--rmd);padding:24px 20px;transition:var(--ease);position:relative;overflow:hidden;opacity:0;transform:translateY(20px)}
+    .sk-card.visible{opacity:1;transform:translateY(0)}
+    .sk-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity var(--ease)}
+    .sk-card:hover{border-color:var(--bdrh);background:var(--bg4);transform:translateY(-5px);box-shadow:0 16px 40px rgba(212,175,55,.07)}
+    .sk-card:hover::before{opacity:1}
+    .sk-ico{width:40px;height:40px;border-radius:var(--rsm);background:var(--goldd);display:flex;align-items:center;justify-content:center;margin-bottom:13px;font-size:1.1rem}
+    .sk-nm{font-weight:600;font-size:.91rem;margin-bottom:6px;color:var(--white)}
+    .sk-dc{font-size:.74rem;color:var(--g2);line-height:1.65}
+    .sk-bar{margin-top:13px;height:2px;background:var(--g3);border-radius:99px;overflow:hidden}
+    .sk-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--goldl));border-radius:99px;width:0;transition:width 1.3s ease}
+
+    /* Certifications */
+    #certs{background:var(--bg)}
+    .cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:17px}
+    .cert-card{background:var(--bg3);border:1px solid var(--bdr);border-radius:var(--rmd);padding:22px;transition:var(--ease);opacity:0;transform:translateY(18px)}
+    .cert-card.visible{opacity:1;transform:translateY(0)}
+    .cert-card:hover{border-color:var(--bdrh);transform:translateY(-4px);box-shadow:0 14px 36px rgba(212,175,55,.07)}
+    .cert-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:11px}
+    .cert-ico{font-size:1.35rem}
+    .cert-iss{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;padding:3px 8px;border-radius:99px;background:var(--goldd);color:var(--gold);text-transform:uppercase}
+    .cert-nm{font-weight:600;font-size:.9rem;margin-bottom:5px;color:var(--white)}
+    .cert-dc{font-size:.74rem;color:var(--g2);line-height:1.6}
+    .cert-sc{display:inline-block;margin-top:9px;font-family:var(--mono);font-size:.66rem;padding:3px 9px;border-radius:99px;background:var(--grn);color:var(--grnt)}
+
+    /* Education */
+    #education{background:var(--bg2)}
+    .edu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:20px}
+    .edu-card{background:var(--bg3);border:1px solid var(--bdr);border-radius:var(--rmd);padding:28px;transition:var(--ease);opacity:0;transform:translateY(20px)}
+    .edu-card.visible{opacity:1;transform:translateY(0)}
+    .edu-card:hover{border-color:var(--bdrh);transform:translateY(-4px);box-shadow:0 14px 36px rgba(212,175,55,.07)}
+    .edu-bdg{display:inline-block;font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;padding:3px 10px;border-radius:99px;background:var(--goldd);color:var(--gold);text-transform:uppercase;margin-bottom:12px}
+    .edu-deg{font-family:var(--serif);font-size:1.18rem;font-weight:700;margin-bottom:4px}
+    .edu-ins{font-size:.82rem;color:var(--goldl);font-weight:500;margin-bottom:3px}
+    .edu-yr{font-family:var(--mono);font-size:.68rem;color:var(--g2);margin-bottom:12px}
+    .edu-dt{font-size:.8rem;color:var(--g1);line-height:1.75}
+    .edu-dt strong{color:var(--gold);font-weight:600}
+    .edu-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+    .edu-chip{font-family:var(--mono);font-size:.63rem;padding:3px 9px;border-radius:99px;border:1px solid var(--bdr);color:var(--g1)}
+
+    /* Achievements */
+    #achievements{background:var(--bg)}
+    .ach-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:17px}
+    .ach-card{background:var(--bg3);border:1px solid var(--bdr);border-radius:var(--rmd);padding:24px;display:flex;gap:15px;transition:var(--ease);opacity:0;transform:translateY(18px)}
+    .ach-card.visible{opacity:1;transform:translateY(0)}
+    .ach-card:hover{border-color:var(--bdrh);transform:translateY(-3px)}
+    .ach-ico{font-size:1.55rem;flex-shrink:0}
+    .ach-ti{font-weight:600;font-size:.9rem;margin-bottom:5px}
+    .ach-dc{font-size:.76rem;color:var(--g2);line-height:1.6}
+
+    /* Tools */
+    #tools{background:var(--bg2)}
+    .tools-intro{max-width:600px;color:var(--g1);font-size:.92rem;margin-bottom:50px;line-height:1.8}
+    .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(225px,1fr));gap:17px}
+    .tool-card{background:var(--bg3);border:1px solid var(--bdr);border-radius:var(--rmd);padding:24px;transition:var(--ease);position:relative;overflow:hidden;opacity:0;transform:translateY(18px)}
+    .tool-card.visible{opacity:1;transform:translateY(0)}
+    .tool-card:hover{border-color:var(--bdrh);transform:translateY(-4px)}
+    .tool-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:13px}
+    .tool-ico{font-size:1.35rem}
+    .soon-b{font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;padding:3px 7px;border-radius:99px;background:rgba(251,191,36,.1);color:#fbbf24;border:1px solid rgba(251,191,36,.2);text-transform:uppercase}
+    .tool-nm{font-weight:600;font-size:.9rem;margin-bottom:5px}
+    .tool-dc{font-size:.74rem;color:var(--g2);line-height:1.6}
+    .tool-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity var(--ease)}
+    .tool-card:hover::after{opacity:1}
+
+    /* Content */
+    #content{background:var(--bg)}
+    .brand-g{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .brand-card{background:var(--bg3);border:1px solid var(--bdr);border-radius:var(--rmd);padding:34px;transition:var(--ease);display:flex;flex-direction:column;gap:13px;opacity:0;transform:translateY(18px)}
+    .brand-card.visible{opacity:1;transform:translateY(0)}
+    .brand-card:hover{border-color:var(--bdrh);transform:translateY(-4px);box-shadow:0 14px 36px rgba(212,175,55,.07)}
+    .brand-pl{font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase}
+    .brand-hd{font-family:var(--serif);font-size:1.35rem;font-weight:700}
+    .brand-dc{font-size:.82rem;color:var(--g1);line-height:1.75}
+    .brand-lk{display:inline-flex;align-items:center;gap:7px;font-size:.79rem;font-weight:600;color:var(--gold);margin-top:auto;transition:gap var(--ease),color var(--ease)}
+    .brand-lk:hover{gap:13px;color:var(--goldl)}
+
+    /* Contact */
+    #contact{background:var(--bg2)}
+    .cont-g{display:grid;grid-template-columns:1fr 1.3fr;gap:68px;align-items:start}
+    .cont-g p{color:var(--g1);font-size:.89rem;line-height:1.8;margin-bottom:32px}
+    .c-links{display:flex;flex-direction:column;gap:11px}
+    .c-lk{display:flex;align-items:center;gap:13px;padding:13px 17px;background:var(--bg3);border:1px solid var(--bdr);border-radius:var(--rmd);font-size:.83rem;color:var(--g1);transition:var(--ease)}
+    .c-lk:hover{border-color:var(--bdrh);color:var(--goldl);transform:translateX(4px)}
+    .c-ico{width:32px;height:32px;border-radius:var(--rsm);background:var(--goldd);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--gold)}
+    .c-txt{display:flex;flex-direction:column;gap:1px}
+    .c-lbl{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;color:var(--g2);text-transform:uppercase}
+    .c-val{font-weight:500;color:var(--white);font-size:.82rem}
+    .cf{display:flex;flex-direction:column;gap:13px}
+    .f-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+    .fg{display:flex;flex-direction:column;gap:5px}
+    .flbl{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;color:var(--g2);text-transform:uppercase}
+    .fi,.fta{background:var(--bg3);border:1px solid var(--bdr);border-radius:var(--rsm);padding:11px 14px;color:var(--white);font-family:var(--sans);font-size:.86rem;outline:none;width:100%;transition:border-color var(--ease),box-shadow var(--ease)}
+    .fi:focus,.fta:focus{border-color:var(--gold);box-shadow:0 0 0 3px var(--goldd)}
+    .fta{height:118px;resize:vertical}
+    .fi::placeholder,.fta::placeholder{color:var(--g2)}
+    .fnote{font-size:.72rem;color:var(--g2);text-align:center}
+
+    /* Footer */
+    footer{background:var(--bg);border-top:1px solid var(--bdr);padding:34px 0}
+    .ft-in{max-width:1160px;margin:0 auto;padding:0 32px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+    .ft-logo{font-family:var(--serif);font-weight:700;font-size:1rem}
+    .ft-logo span{color:var(--gold)}
+    .ft-tag{font-size:.74rem;color:var(--g2);font-style:italic}
+    .ft-copy{font-family:var(--mono);font-size:.63rem;color:var(--g2);letter-spacing:.04em}
+
+    /* Animations */
+    @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+    @keyframes scr{0%,100%{opacity:.25;transform:scaleY(.6);transform-origin:top}50%{opacity:1;transform:scaleY(1)}}
+
+    /* Responsive */
+    @media(max-width:900px){
+      .about-g{grid-template-columns:1fr}
+      .ph-wrap{max-width:300px;margin:0 auto}
+      .cont-g{grid-template-columns:1fr;gap:42px}
+      .brand-g{grid-template-columns:1fr}
+      .f-row{grid-template-columns:1fr}
+    }
+    @media(max-width:768px){
+      .nav-links{display:none}
+      .hamburger{display:flex}
+      .section{padding:80px 0}
+      .hero-name{font-size:clamp(3rem,12vw,5rem)}
+    }
+    @media(max-width:480px){
+      .container{padding:0 20px}
+      .abt-stats{grid-template-columns:1fr 1fr}
+      .hero-acts{flex-direction:column}
+      .btn{justify-content:center}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">BR<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certs">Certifications</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#tools">Lab</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mob-menu" id="mob">
+  <a href="#about" class="ml">About</a>
+  <a href="#experience" class="ml">Experience</a>
+  <a href="#skills" class="ml">Skills</a>
+  <a href="#certs" class="ml">Certifications</a>
+  <a href="#education" class="ml">Education</a>
+  <a href="#tools" class="ml">Lab</a>
+  <a href="#content" class="ml">Content</a>
+  <a href="#contact" class="ml">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-ov"></div>
+  <div class="hero-cnt">
+    <div class="hero-ey">Finance Professional &nbsp;·&nbsp; Mumbai / Dubai</div>
+
+    <h1 class="hero-name">
+      <span class="w1">BHARAT</span>
+      <span class="w2">RAJATIYA</span>
+    </h1>
+
+    <div class="hero-tw-wrap">
+      <span class="hero-tw" id="tw"></span><span class="cursor"></span>
+    </div>
+
+    <div class="hero-skills">
+      <span class="hchip"><span class="dot"></span>Treasury &amp; Derivatives</span>
+      <span class="hchip"><span class="dot"></span>IFRS Reporting</span>
+      <span class="hchip"><span class="dot"></span>Valuation &amp; DCF</span>
+      <span class="hchip"><span class="dot"></span>Power BI</span>
+      <span class="hchip"><span class="dot"></span>Capital Markets</span>
+      <span class="hchip"><span class="dot"></span>Risk Management</span>
+      <span class="hchip"><span class="dot"></span>Python · Excel</span>
+    </div>
+
+    <div class="hero-acts">
+      <a href="mailto:rajatiyabharat@gmail.com" class="btn btn-p">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        Get in Touch
+      </a>
+      <a href="https://linkedin.com/in/bharatrajatiya" target="_blank" rel="noopener" class="btn btn-o">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a href="#experience" class="btn btn-g">Explore Work ↓</a>
+    </div>
+  </div>
+  <div class="hero-scr"><span>Scroll</span><div class="scr-line"></div></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="slbl">01 · About</div>
+    <div class="about-g">
+      <div class="ph-wrap">
+        <div class="ph-box">
+          <div class="ph-av">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="ph-hint">
+            <strong>Add Your Photo Here</strong>
+            <em>A professional headshot builds trust<br>with global recruiters. Recommended.</em>
+          </div>
+        </div>
+        <div class="ph-acc">
+          <div class="big">5+</div>
+          <div class="sml">Years in<br>Finance</div>
+        </div>
+      </div>
+
+      <div class="abt-text">
+        <div class="slbl">The Story</div>
+        <h2 style="font-family:var(--serif);font-size:clamp(1.7rem,3vw,2.4rem);font-weight:700;line-height:1.2;margin-bottom:20px;">
+          From the fields of <span style="color:var(--gold)">Gujarat</span><br>to global finance floors
+        </h2>
+
+        <div class="abt-quote">
+          "The best finance professionals aren't born in corner offices — they're forged in <span>discipline, ambition,</span> and the hunger to prove something."
+        </div>
+
+        <p>I grew up in a <strong>small farming family in Gujarat</strong> — a background that instilled an uncompromising work ethic and a deep respect for every rupee earned. Finance wasn't a career of convenience; it was a deliberate, ambitious choice to understand how wealth is created, moved, and managed at scale.</p>
+
+        <p>That conviction drove me through the <strong>CA curriculum at ICAI</strong> — clearing all three levels in first attempts — into a <strong>Finance Analyst role at UBS Investment Bank</strong> (Leveraged Finance, Special Situations). I earned a Pre-Placement Offer from UBS. That says more than any certificate.</p>
+
+        <p>Today, as <strong>Finance Manager – Investments at Aditya Birla Capital</strong>, I manage treasury operations and derivatives portfolios for one of India's largest conglomerates ($112Bn+ Market Cap). I've generated <em>₹50L+ in incremental income</em> through fund optimization and was recognized as <em>"Idea Machine"</em> — Quarterly Top Performer by the CIO.</p>
+
+        <p>I'm a <strong>CFA Level 2 candidate</strong> with certifications in equity derivatives, research analysis, and UAE taxation — and one clear destination: <em>a high-impact finance role in Dubai or Europe.</em></p>
+
+        <div class="abt-stats">
+          <div class="sbox"><div class="snum">CA</div><div class="slb2">All levels<br>1st attempt</div></div>
+          <div class="sbox"><div class="snum">CFA</div><div class="slb2">L1 cleared<br>L2 candidate</div></div>
+          <div class="sbox"><div class="snum">PPO</div><div class="slb2">UBS<br>Received</div></div>
+        </div>
+
+        <div class="abt-tags">
+          <span class="atag">English</span>
+          <span class="atag">Hindi</span>
+          <span class="atag">Gujarati</span>
+          <span class="atag">Chess Player</span>
+          <span class="atag">Solo Traveller</span>
+          <span class="atag">Volleyball</span>
+          <span class="atag">10K+ LinkedIn</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <div class="container">
+    <div class="slbl">02 · Experience</div>
+    <h2 class="stitle">Where I've <span>Built Things</span></h2>
+    <div class="tline">
+
+      <!-- Aditya Birla -->
+      <div class="tl-item" data-animate>
+        <div class="tl-dot"></div>
+        <div class="tl-meta">
+          <span class="tbadge">Finance Manager</span>
+          <span class="tbadge awd">🏆 Idea Machine Award</span>
+          <span class="tdate">Oct 2024 – Present</span>
+        </div>
+        <div class="tco">Aditya Birla Capital / ABSLI</div>
+        <div class="trole">Finance Manager – Investments · Mumbai · $112Bn+ Conglomerate</div>
+        <div class="tbody">
+          <ul class="tpts">
+            <li>Recognized with <strong>Quarterly Top Performer Award by CIO</strong> under the "Idea Machine" category for performance excellence and financial innovation.</li>
+            <li>Managed treasury operations and optimized fund utilization, generating <em>incremental income of ₹50L+</em> through improved liquidity deployment.</li>
+            <li>Calculated hedge effectiveness, offset ratios, and valuations of <strong>OTC derivatives (FRA)</strong> to support risk management and regulatory reporting.</li>
+            <li>Valuations of bonds, money market securities and structured instruments — providing accurate, timely insights to senior management and regulators.</li>
+            <li>Built and maintained strong relationships with brokers, custodians, and intermediaries ensuring smooth execution across settlement cycles.</li>
+            <li>Prepared and presented <strong>Investment &amp; Treasury MIS reports</strong> to senior management with actionable portfolio analytics and performance insights.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- UBS -->
+      <div class="tl-item" data-animate style="transition-delay:.1s">
+        <div class="tl-dot"></div>
+        <div class="tl-meta">
+          <span class="tbadge">Finance Analyst</span>
+          <span class="tbadge ppo">PPO Received ✓</span>
+          <span class="tdate">Feb 2023 – Aug 2024</span>
+        </div>
+        <div class="tco">UBS Investment Bank</div>
+        <div class="trole">Finance Analyst – Leveraged Finance · Pune · Swiss Global IB</div>
+        <div class="tbody">
+          <ul class="tpts">
+            <li>Contributed to the corporate lending team covering <strong>Special Situation Group (SSG), Leveraged Capital Markets (LCM), and Risk Management</strong>.</li>
+            <li>Single-handedly performed analytical reviews, variance analysis, and GAAP analysis of financial statements for investment banking products.</li>
+            <li><strong>Automated multiple reports and controls</strong>, saving <em>3+ man-hours daily</em> through Python and Excel-based workflow improvements.</li>
+            <li>MTM validation, trend analysis, and <strong>P&amp;L reporting under IFRS 9 and IFRS 15</strong> with precision and timeliness across global ledgers.</li>
+            <li>Collaborated with onshore teams across US and EMEA on deal reviews, risk escalations, and critical issue resolution under tight timelines.</li>
+            <li>Awarded <strong>Pre-Placement Offer (PPO)</strong> — recognition of consistent technical excellence and business impact across 18 months.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Parikh & Associates -->
+      <div class="tl-item" data-animate style="transition-delay:.2s">
+        <div class="tl-dot"></div>
+        <div class="tl-meta">
+          <span class="tbadge">CA Articleship</span>
+          <span class="tdate">Jun 2021 – Jan 2023</span>
+        </div>
+        <div class="tco">Parikh &amp; Associates</div>
+        <div class="trole">Article Assistant – CA Firm · Ahmedabad · Leading Practice</div>
+        <div class="tbody">
+          <ul class="tpts">
+            <li>Executed statutory audits across <strong>Manufacturing, Real Estate, Finance and Healthcare</strong> for companies with turnovers of ₹50–400 crores.</li>
+            <li>Handled <strong>Concurrent Audit of a Foreign Bank</strong> — reviewing corporate loans, trade finance, and personal banking functions.</li>
+            <li>Led FP&amp;A: preparation and finalization of financial statements from scratch for regulatory and financing purposes.</li>
+            <li>GST return filing, income tax planning and compliance, and direct/indirect tax advisory across sectors.</li>
+            <li>Delivered special projects: <em>Technical Economic Viability Reports, Project Financing, Real Estate Compliance,</em> and Pre-Audit engagements.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Freelancing -->
+      <div class="tl-item" data-animate style="transition-delay:.3s">
+        <div class="tl-dot"></div>
+        <div class="tl-meta">
+          <span class="tbadge">Independent</span>
+          <span class="tdate">2022 – Ongoing</span>
+        </div>
+        <div class="tco">Professional Freelancing</div>
+        <div class="trole">Finance Consultant · Independent · Advisory &amp; Compliance</div>
+        <div class="tbody">
+          <ul class="tpts">
+            <li>Providing finance, advisory, compliance, and taxation services to <strong>small businesses and individuals</strong> seeking professional financial guidance.</li>
+            <li>GST compliance, income tax filings, bookkeeping, and financial statement preparation for growing ventures.</li>
+            <li>Advisory on business structuring, project financing feasibility, and regulatory compliance across sectors.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="container">
+    <div class="slbl">03 · Skills</div>
+    <h2 class="stitle">What I <span>Bring</span></h2>
+    <div class="sk-grid">
+      <div class="sk-card" data-animate data-level="92"><div class="sk-ico">🏦</div><div class="sk-nm">Treasury &amp; Derivatives</div><div class="sk-dc">OTC derivatives (FRA) valuation, hedge effectiveness, fund optimization, liquidity management.</div><div class="sk-bar"><div class="sk-fill"></div></div></div>
+      <div class="sk-card" data-animate data-level="88" style="transition-delay:.07s"><div class="sk-ico">📋</div><div class="sk-nm">IFRS Reporting</div><div class="sk-dc">P&amp;L under IFRS 9 &amp; 15, MTM validation, variance analysis, GAAP financial statement review.</div><div class="sk-bar"><div class="sk-fill"></div></div></div>
+      <div class="sk-card" data-animate data-level="85" style="transition-delay:.14s"><div class="sk-ico">💎</div><div class="sk-nm">Valuation</div><div class="sk-dc">DCF, bonds &amp; money market instruments, equity, relative valuation. CFA-level analytical rigor.</div><div class="sk-bar"><div class="sk-fill"></div></div></div>
+      <div class="sk-card" data-animate data-level="83" style="transition-delay:.21s"><div class="sk-ico">📊</div><div class="sk-nm">Power BI</div><div class="sk-dc">MIS dashboards, DAX measures, investment performance reporting, KPI monitoring for leadership.</div><div class="sk-bar"><div class="sk-fill"></div></div></div>
+      <div class="sk-card" data-animate data-level="80" style="transition-delay:.28s"><div class="sk-ico">🌐</div><div class="sk-nm">Capital Markets</div><div class="sk-dc">Equity, fixed income, leveraged finance, derivatives. Real experience across IB and buy-side.</div><div class="sk-bar"><div class="sk-fill"></div></div></div>
+      <div class="sk-card" data-animate data-level="75" style="transition-delay:.35s"><div class="sk-ico">🐍</div><div class="sk-nm">Python · Excel · SAP</div><div class="sk-dc">pandas for automation, advanced Excel modelling, VBA, SAP and Tally ERP proficiency.</div><div class="sk-bar"><div class="sk-fill"></div></div></div>
+      <div class="sk-card" data-animate data-level="80" style="transition-delay:.42s"><div class="sk-ico">⚖️</div><div class="sk-nm">Risk Management</div><div class="sk-dc">Scenario analysis, portfolio risk, credit analysis across SSG and LCM deal structures.</div><div class="sk-bar"><div class="sk-fill"></div></div></div>
+      <div class="sk-card" data-animate data-level="72" style="transition-delay:.49s"><div class="sk-ico">🧾</div><div class="sk-nm">Tax &amp; Compliance</div><div class="sk-dc">GST, Income Tax, UAE VAT &amp; Corporate Tax. Statutory audit, concurrent audit, regulatory filings.</div><div class="sk-bar"><div class="sk-fill"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CERTIFICATIONS -->
+<section id="certs" class="section">
+  <div class="container">
+    <div class="slbl">04 · Certifications</div>
+    <h2 class="stitle">Verified <span>Credentials</span></h2>
+    <div class="cert-grid">
+
+      <div class="cert-card" data-animate>
+        <div class="cert-top"><div class="cert-ico">📈</div><span class="cert-iss">SEBI / NISM</span></div>
+        <div class="cert-nm">NISM VIII – Equity Derivatives</div>
+        <div class="cert-dc">Equity derivative instruments, trading, settlement, and risk framework under SEBI regulations.</div>
+        <div class="cert-sc">Score: 90 / 100</div>
+      </div>
+
+      <div class="cert-card" data-animate style="transition-delay:.08s">
+        <div class="cert-top"><div class="cert-ico">🔍</div><span class="cert-iss">SEBI / NISM</span></div>
+        <div class="cert-nm">NISM XV – Research Analyst</div>
+        <div class="cert-dc">Securities research, financial analysis, and regulatory framework for capital market research professionals.</div>
+        <div class="cert-sc">Score: 78.75 / 100</div>
+      </div>
+
+      <div class="cert-card" data-animate style="transition-delay:.16s">
+        <div class="cert-top"><div class="cert-ico">🎓</div><span class="cert-iss">CFA Institute</span></div>
+        <div class="cert-nm">CFA Level 1 — Passed</div>
+        <div class="cert-dc">Passed May 2025. Currently pursuing Level 2 with focus on equity valuation, fixed income, and portfolio management.</div>
+        <div class="cert-sc">Score: 1760 / 1900</div>
+      </div>
+
+      <div class="cert-card" data-animate style="transition-delay:.24s">
+        <div class="cert-top"><div class="cert-ico">🏗️</div><span class="cert-iss">CFA Institute</span></div>
+        <div class="cert-nm">Financial Modelling</div>
+        <div class="cert-dc">CFA Institute certified program covering DCF, scenario analysis, and sensitivity tables for professional analysts.</div>
+      </div>
+
+      <div class="cert-card" data-animate style="transition-delay:.32s">
+        <div class="cert-top"><div class="cert-ico">📉</div><span class="cert-iss">Zerodha</span></div>
+        <div class="cert-nm">Technical Analysis &amp; Futures Trading</div>
+        <div class="cert-dc">Chart patterns, technical indicators, futures strategies, and practical derivatives trading methodology.</div>
+      </div>
+
+      <div class="cert-card" data-animate style="transition-delay:.40s">
+        <div class="cert-top"><div class="cert-ico">🇦🇪</div><span class="cert-iss">UAE</span></div>
+        <div class="cert-nm">UAE VAT &amp; Corporate Tax</div>
+        <div class="cert-dc">UAE Federal Tax Authority framework — VAT compliance, corporate tax filing, and financial reporting under UAE regulations.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EDUCATION -->
+<section id="education" class="section">
+  <div class="container">
+    <div class="slbl">05 · Education</div>
+    <h2 class="stitle">Academic <span>Foundation</span></h2>
+    <div class="edu-grid">
+
+      <div class="edu-card" data-animate>
+        <div class="edu-bdg">Professional · ICAI</div>
+        <div class="edu-deg">Chartered Accountant</div>
+        <div class="edu-ins">Institute of Chartered Accountants of India</div>
+        <div class="edu-yr">Jul 2019 – Jul 2024</div>
+        <div class="edu-dt">All three levels cleared in <strong>first attempt</strong>. Comprehensive training across Finance, Audit, Tax, Law, and Strategic Management.</div>
+        <div class="edu-chips">
+          <span class="edu-chip">Final: 380/600 (63%)</span>
+          <span class="edu-chip">4 Exemptions</span>
+          <span class="edu-chip">Inter: 444/800 (55%)</span>
+          <span class="edu-chip">Foundation: 273/400 (68%)</span>
+        </div>
+      </div>
+
+      <div class="edu-card" data-animate style="transition-delay:.1s">
+        <div class="edu-bdg">Global · CFA Institute</div>
+        <div class="edu-deg">CFA Program</div>
+        <div class="edu-ins">CFA Institute, USA</div>
+        <div class="edu-yr">Level 1: May 2025 · Level 2: In Progress</div>
+        <div class="edu-dt">CFA Level 1 cleared with score of <strong>1760/1900</strong>. Pursuing Level 2 with focus on equity valuation, fixed income, and portfolio construction.</div>
+      </div>
+
+      <div class="edu-card" data-animate style="transition-delay:.2s">
+        <div class="edu-bdg">Undergraduate</div>
+        <div class="edu-deg">B.Com – Accounting &amp; Finance</div>
+        <div class="edu-ins">Gujarat University, Ahmedabad</div>
+        <div class="edu-yr">Jul 2019 – Jul 2022</div>
+        <div class="edu-dt">Accounting, Economics, Business Law, Finance. <strong>GPA: 7.31/10</strong>. Strong analytical foundation running parallel to CA articleship.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="section">
+  <div class="container">
+    <div class="slbl">06 · Beyond the Desk</div>
+    <h2 class="stitle">Achievements &amp; <span>Impact</span></h2>
+    <div class="ach-grid">
+      <div class="ach-card" data-animate><div class="ach-ico">🎤</div><div><div class="ach-ti">Algo Trading Research Paper</div><div class="ach-dc">Presented research on Algorithmic Trading at CA Conference, Vasai (Mumbai) in front of 800+ audience.</div></div></div>
+      <div class="ach-card" data-animate style="transition-delay:.08s"><div class="ach-ico">🏆</div><div><div class="ach-ti">"Idea Machine" – CIO Award</div><div class="ach-dc">Quarterly Top Performer recognition by the Chief Investment Officer at Aditya Birla Capital for outstanding contributions.</div></div></div>
+      <div class="ach-card" data-animate style="transition-delay:.16s"><div class="ach-ico">🌐</div><div><div class="ach-ti">Guest Speaker · 10K+ Network</div><div class="ach-dc">Invited across multiple sessions guiding CA aspirants and young finance professionals. 10,000+ LinkedIn followers.</div></div></div>
+      <div class="ach-card" data-animate style="transition-delay:.24s"><div class="ach-ico">❤️</div><div><div class="ach-ti">Robinhood Army Volunteer</div><div class="ach-dc">Active volunteer with the Robinhood Army — redistributing surplus food to the underprivileged across Indian cities.</div></div></div>
+      <div class="ach-card" data-animate style="transition-delay:.32s"><div class="ach-ico">✈️</div><div><div class="ach-ti">Solo Traveller</div><div class="ach-dc">Exploring the world solo — one city, one market at a time. Next stop: Dubai and European financial centers.</div></div></div>
+      <div class="ach-card" data-animate style="transition-delay:.40s"><div class="ach-ico">♟️</div><div><div class="ach-ti">Chess &amp; Volleyball</div><div class="ach-dc">Chess for strategic thinking; volleyball for team dynamics. Both directly inform how I approach complex financial problems.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TOOLS LAB -->
+<section id="tools" class="section">
+  <div class="container">
+    <div class="slbl">07 · Finance Lab</div>
+    <h2 class="stitle">Tools I'm <span>Building</span></h2>
+    <p class="tools-intro">Finance professionals should also be builders. This lab will host practical, no-nonsense finance tools — calculators, models, and planners built for real decision-making. Each tool below is under active development.</p>
+    <div class="tools-grid">
+      <div class="tool-card" data-animate><div class="tool-top"><div class="tool-ico">💰</div><span class="soon-b">Soon</span></div><div class="tool-nm">Purchase Power Calculator</div><div class="tool-dc">Inflation-adjusted real purchasing power. Compare ₹ today vs ₹ tomorrow across asset classes.</div></div>
+      <div class="tool-card" data-animate style="transition-delay:.08s"><div class="tool-top"><div class="tool-ico">🧾</div><span class="soon-b">Soon</span></div><div class="tool-nm">Invoice Generator</div><div class="tool-dc">Professional GST-ready invoice creation for freelancers and finance consultants. PDF export included.</div></div>
+      <div class="tool-card" data-animate style="transition-delay:.16s"><div class="tool-top"><div class="tool-ico">📊</div><span class="soon-b">Soon</span></div><div class="tool-nm">SIP Return Calculator</div><div class="tool-dc">Visualize SIP wealth creation with CAGR, step-up SIP options, and market return scenarios.</div></div>
+      <div class="tool-card" data-animate style="transition-delay:.24s"><div class="tool-top"><div class="tool-ico">📅</div><span class="soon-b">Soon</span></div><div class="tool-nm">Budget Planner</div><div class="tool-dc">50/30/20 rule-based personal budget planner with smart category breakdowns and savings projections.</div></div>
+      <div class="tool-card" data-animate style="transition-delay:.32s"><div class="tool-top"><div class="tool-ico">📉</div><span class="soon-b">Soon</span></div><div class="tool-nm">DCF Valuation Model</div><div class="tool-dc">Simple DCF tool with WACC, terminal growth rate assumptions, and a sensitivity analysis table.</div></div>
+      <div class="tool-card" data-animate style="transition-delay:.40s"><div class="tool-top"><div class="tool-ico">🏦</div><span class="soon-b">Soon</span></div><div class="tool-nm">Bond Yield Calculator</div><div class="tool-dc">Price-yield relationship, duration, convexity — built from real fixed income experience at UBS and ABSLI.</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTENT / BRAND -->
+<section id="content" class="section">
+  <div class="container">
+    <div class="slbl">08 · Personal Brand</div>
+    <h2 class="stitle">Content &amp; <span>Community</span></h2>
+    <div class="brand-g">
+
+      <div class="brand-card" data-animate>
+        <div class="brand-pl">LinkedIn · Active</div>
+        <div class="brand-hd">Finance Insights &amp; Career Stories</div>
+        <div class="brand-dc">Perspectives on capital markets, investment careers, CFA preparation, and what it truly takes to build a global finance career from ground up. 10,000+ professionals follow this journey.</div>
+        <a href="https://linkedin.com/in/bharatrajatiya" target="_blank" rel="noopener" class="brand-lk">Visit Profile →</a>
+      </div>
+
+      <div class="brand-card" data-animate style="transition-delay:.1s">
+        <div class="brand-pl">Telegram · Community</div>
+        <div class="brand-hd">WhyBharat — Finance &amp; Ideas</div>
+        <div class="brand-dc">A Telegram community sharing finance insights, market notes, CA/CFA prep resources, and real-world career experiences for aspiring finance professionals.</div>
+        <a href="https://t.me/whybharat" target="_blank" rel="noopener" class="brand-lk">Join Community →</a>
+      </div>
+
+      <div class="brand-card" data-animate style="transition-delay:.2s">
+        <div class="brand-pl">YouTube · Coming Soon</div>
+        <div class="brand-hd">Finance Education &amp; Deep Dives</div>
+        <div class="brand-dc">A channel making finance genuinely understandable — CFA curriculum breakdowns, market analysis, and career advice from someone who has lived the journey from Gujarat to global IB.</div>
+        <a href="#" class="brand-lk" style="opacity:.4;cursor:not-allowed;">Channel Launching Soon →</a>
+      </div>
+
+      <div class="brand-card" data-animate style="transition-delay:.3s">
+        <div class="brand-pl">Instagram · Personal</div>
+        <div class="brand-hd">Life, Travel &amp; Finance</div>
+        <div class="brand-dc">Behind-the-scenes of a finance life — solo travels, chess moments, conference highlights, and occasional market thoughts. The human side of the CV.</div>
+        <a href="https://instagram.com/bharat.rajatiya" target="_blank" rel="noopener" class="brand-lk">Follow →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="slbl">09 · Contact</div>
+    <div class="cont-g">
+      <div>
+        <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;line-height:1.2;margin-bottom:16px;">Let's <span style="color:var(--gold)">Connect</span></h2>
+        <p>Open to conversations about global finance roles, investment opportunities, CFA prep, market insights, and everything in between. Recruiters, mentors, and fellow finance professionals — welcome.</p>
+        <div class="c-links">
+          <a href="mailto:rajatiyabharat@gmail.com" class="c-lk"><div class="c-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div><div class="c-txt"><span class="c-lbl">Email</span><span class="c-val">rajatiyabharat@gmail.com</span></div></a>
+          <a href="tel:+971559163224" class="c-lk"><div class="c-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 14a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 3.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.9a16 16 0 0 0 6 6l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 18z"/></svg></div><div class="c-txt"><span class="c-lbl">Dubai (UAE)</span><span class="c-val">+971 55 916 3224</span></div></a>
+          <a href="tel:+919737564362" class="c-lk"><div class="c-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 14a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 3.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.9a16 16 0 0 0 6 6l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 18z"/></svg></div><div class="c-txt"><span class="c-lbl">India</span><span class="c-val">+91 973 756 4362</span></div></a>
+          <a href="https://linkedin.com/in/bharatrajatiya" target="_blank" rel="noopener" class="c-lk"><div class="c-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div><div class="c-txt"><span class="c-lbl">LinkedIn</span><span class="c-val">linkedin.com/in/bharatrajatiya</span></div></a>
+          <a href="https://t.me/whybharat" target="_blank" rel="noopener" class="c-lk"><div class="c-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div><div class="c-txt"><span class="c-lbl">Telegram</span><span class="c-val">t.me/whybharat</span></div></a>
+        </div>
+      </div>
+      <div>
+        <form class="cf" onsubmit="hf(event)">
+          <div class="f-row">
+            <div class="fg"><label class="flbl">First Name</label><input type="text" class="fi" placeholder="John" /></div>
+            <div class="fg"><label class="flbl">Last Name</label><input type="text" class="fi" placeholder="Doe" /></div>
+          </div>
+          <div class="fg"><label class="flbl">Email</label><input type="email" class="fi" placeholder="you@company.com" /></div>
+          <div class="fg"><label class="flbl">I'm reaching out about</label><input type="text" class="fi" placeholder="Job Opportunity / CFA Prep / Collaboration / Market Chat" /></div>
+          <div class="fg"><label class="flbl">Message</label><textarea class="fta" placeholder="Tell me more..."></textarea></div>
+          <button type="submit" class="btn btn-p" style="width:100%;justify-content:center;">Send Message →</button>
+          <p class="fnote" id="fm" style="display:none;color:var(--gold);">✓ Thanks! Reach me directly at rajatiyabharat@gmail.com</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-in">
+    <div class="ft-logo">CA Bharat Rajatiya<span>.</span></div>
+    <div class="ft-tag">CA · CFA Candidate · Finance Manager · Aspiring Global Finance Leader</div>
+    <div class="ft-copy">© 2025 Bharat Rajatiya · Mumbai / Dubai · Built with precision, not templates.</div>
+  </div>
+</footer>
+
+<script>
+/* Navbar */
+const nb=document.getElementById('navbar'),nls=document.querySelectorAll('.nav-links a'),secs=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',()=>{
+  nb.classList.toggle('scrolled',scrollY>60);
+  let c='';secs.forEach(s=>{if(scrollY>=s.offsetTop-130)c=s.id});
+  nls.forEach(a=>{a.classList.remove('active');if(a.getAttribute('href')==='#'+c)a.classList.add('active')});
+});
+
+/* Hamburger */
+const hm=document.getElementById('ham'),mb=document.getElementById('mob');
+hm.addEventListener('click',()=>{hm.classList.toggle('open');mb.classList.toggle('open');document.body.style.overflow=mb.classList.contains('open')?'hidden':''});
+document.querySelectorAll('.ml').forEach(a=>a.addEventListener('click',()=>{hm.classList.remove('open');mb.classList.remove('open');document.body.style.overflow=''}));
+
+/* IntersectionObserver for scroll-animate */
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(el=>{
+    if(el.isIntersecting){
+      el.target.classList.add('visible');
+      const f=el.target.querySelector('.sk-fill');
+      if(f)setTimeout(()=>{f.style.width=(el.target.dataset.level||70)+'%'},150);
+    }
+  });
+},{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('[data-animate]').forEach(el=>obs.observe(el));
+
+/* Typewriter */
+const phrases=['Chartered Accountant · CA (ICAI)','CFA Level 2 Candidate','Finance Manager – Investments','Ex-UBS Investment Bank · PPO Received','Treasury · Derivatives · IFRS Expert','Targeting Dubai & Global Finance Roles'];
+let pi=0,ci=0,del=false;
+const tw=document.getElementById('tw');
+function type(){
+  const ph=phrases[pi];
+  if(!del){tw.textContent=ph.slice(0,++ci);if(ci===ph.length){del=true;setTimeout(type,2400);return}setTimeout(type,55)}
+  else{tw.textContent=ph.slice(0,--ci);if(ci===0){del=false;pi=(pi+1)%phrases.length;setTimeout(type,420);return}setTimeout(type,28)}
+}
+setTimeout(type,1300);
+
+/* Hero Canvas — vivid, dynamic particles with mouse interaction */
+(function(){
+  const cv=document.getElementById('hero-canvas'),ctx=cv.getContext('2d');
+  let W,H,pts=[];
+  const N=95;
+
+  function resize(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight}
+
+  class P{
+    constructor(){this.reset()}
+    reset(){
+      this.x=Math.random()*(W||window.innerWidth);
+      this.y=Math.random()*(H||window.innerHeight);
+      this.r=Math.random()*2.2+0.7;
+      this.vx=(Math.random()-.5)*.65;
+      this.vy=(Math.random()-.5)*.65;
+      this.alpha=Math.random()*.6+.25;
+      this.gold=Math.random()>.42;
+      this.ph=Math.random()*Math.PI*2;
+    }
+    tick(){
+      this.x+=this.vx; this.y+=this.vy; this.ph+=.028;
+      if(this.x<-10||this.x>W+10||this.y<-10||this.y>H+10)this.reset();
+    }
+    draw(){
+      const a=this.alpha*(.72+.28*Math.sin(this.ph));
+      ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
+      ctx.fillStyle=this.gold?`rgba(212,175,55,${a})`:`rgba(200,196,186,${a*.55})`;
+      ctx.fill();
+    }
+  }
+
+  let mx=-999,my=-999;
+  window.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
+  window.addEventListener('touchmove',e=>{const t=e.touches[0];mx=t.clientX;my=t.clientY});
+
+  function lines(){
+    const D=135;
+    for(let i=0;i<pts.length;i++){
+      for(let j=i+1;j<pts.length;j++){
+        const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.hypot(dx,dy);
+        if(d<D){
+          const a=(1-d/D)*.28;
+          ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);
+          ctx.strokeStyle=`rgba(212,175,55,${a})`;ctx.lineWidth=.65;ctx.stroke();
+        }
+      }
+      const mdx=pts[i].x-mx,mdy=pts[i].y-my,md=Math.hypot(mdx,mdy);
+      if(md<170){
+        const a=(1-md/170)*.42;
+        ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(mx,my);
+        ctx.strokeStyle=`rgba(212,175,55,${a})`;ctx.lineWidth=.9;ctx.stroke();
+      }
+    }
+  }
+
+  function loop(){
+    ctx.clearRect(0,0,W,H);
+    pts.forEach(p=>{p.tick();p.draw()});
+    lines();
+    requestAnimationFrame(loop);
+  }
+
+  resize();
+  pts=Array.from({length:N},()=>new P());
+  window.addEventListener('resize',resize);
+  loop();
+})();
+
+/* Form */
+function hf(e){e.preventDefault();const m=document.getElementById('fm');m.style.display='block';setTimeout(()=>m.style.display='none',5000)}
+</script>
+
+</body>
+</html>
